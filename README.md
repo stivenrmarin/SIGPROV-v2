@@ -93,7 +93,6 @@ python main.py --no-browser     # No abrir navegador automáticamente
 SIGPROV-v2/
 ├── README.md                    ← Este archivo
 ├── README_CLASE.md              ← Guía rápida para el equipo
-├── README_AVANZADO.md           ← Documentación técnica detallada
 ├── SPEC.md                      ← Fuente de verdad del proyecto
 ├── SPEC_EMPRESARIAL.md          ← Roadmap profesional (F0-F8)
 ├── docker-compose.yml           ← Postgres 16
@@ -189,9 +188,9 @@ SIGPROV-v2/
 ## 📚 Documentación adicional
 
 - `README_CLASE.md` — Guía rápida de 3 pasos para correrlo en clase
-- `README_AVANZADO.md` — Documentación técnica detallada
 - `SPEC.md` — Especificación completa (fuente de verdad)
 - `SPEC_EMPRESARIAL.md` — Roadmap de maduración a producto
+- `SIGPROV_CLASE.zip` — Paquete listo para descargar y compartir con el equipo
 
 ---
 
