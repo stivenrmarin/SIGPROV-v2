@@ -1,0 +1,97 @@
+# ============================================================
+#  SIGPROV - .gitignore raiz
+# ============================================================
+
+# ------------------------------------------------------------
+#  Python
+# ------------------------------------------------------------
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+*.egg-info/
+.eggs/
+
+# Entornos virtuales
+venv/
+.venv/
+env/
+ENV/
+
+# ------------------------------------------------------------
+#  Tests y cobertura
+# ------------------------------------------------------------
+.pytest_cache/
+.coverage
+.coverage.*
+coverage.xml
+htmlcov/
+.mypy_cache/
+.ruff_cache/
+.tox/
+
+# Playwright
+playwright-report/
+test-results/
+.playwright/
+
+# ------------------------------------------------------------
+#  Node.js / Frontend
+# ------------------------------------------------------------
+node_modules/
+frontend/node_modules/
+.npm/
+
+# Build artifacts
+frontend/dist/
+frontend/dist-electron/
+frontend/release/
+frontend/build/
+frontend/electron-builder-cache/
+dist/
+build/
+*.tsbuildinfo
+
+# ------------------------------------------------------------
+#  Logs
+# ------------------------------------------------------------
+*.log
+logs/
+
+# ------------------------------------------------------------
+#  Variables de entorno y secretos
+# ------------------------------------------------------------
+.env
+.env.*
+!.env.example
+
+# ------------------------------------------------------------
+#  Base de datos y artefactos de ML
+# ------------------------------------------------------------
+*.db
+*.sqlite
+*.sqlite3
+backend/models/
+backend/data/pgdata/
+backend/backups/
+*.joblib
+*.pkl
+
+# ------------------------------------------------------------
+#  IDEs
+# ------------------------------------------------------------
+.idea/
+.vscode/
+*.swp
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ------------------------------------------------------------
+#  Sistema
+# ------------------------------------------------------------
+*.bak
+*.tmp
+*.orig
+*.rej

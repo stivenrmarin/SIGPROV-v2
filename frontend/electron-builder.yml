@@ -1,0 +1,61 @@
+# ============================================================
+#  SIGPROV - Configuracion de electron-builder
+# ============================================================
+#  Genera instalador NSIS y version portable (.exe) para Windows.
+# ============================================================
+
+appId: co.sanmateo.sigprov
+productName: SIGPROV
+copyright: Copyright © 2026 Universidad San Mateo
+
+directories:
+  output: release
+  buildResources: build
+
+# Solo se empaqueta lo necesario para_runtime
+files:
+  - dist/**/*
+  - electron/dist/**/*
+  - package.json
+  - '!**/*.map'
+  - '!**/*.ts'
+
+asar: true
+compression: normal
+removePackageScripts: true
+buildDependenciesFromSource: false
+npmRebuild: false
+
+win:
+  target:
+    - target: nsis
+      arch:
+        - x64
+    - target: portable
+      arch:
+        - x64
+  artifactName: ${productName}-${version}-${arch}.${ext}
+  icon: build/icon.ico
+  # La app es portable: no requiere instalacion de runtimes.
+  requestedExecutionLevel: asInvoker
+  # winCodeSign incluye symlinks de macOS que Windows no puede crear sin
+  # privilegios de administrador. Se desactiva y el icono del ejecutable se
+  # aplica despues con rcedit (ver scripts/aplicar_icono.ps1).
+  signAndEditExecutable: false
+
+nsis:
+  oneClick: false
+  perMachine: false
+  allowToChangeInstallationDirectory: true
+  createDesktopShortcut: true
+  createStartMenuShortcut: true
+  shortcutName: SIGPROV
+  deleteAppDataOnUninstall: false
+  installerIcon: build/icon.ico
+  uninstallerIcon: build/icon.ico
+  installerHeaderIcon: build/icon.ico
+
+portable:
+  artifactName: ${productName}-${version}-portable.${ext}
+
+publish: null
